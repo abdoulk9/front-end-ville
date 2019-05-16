@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>insert-ville</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Ville:</ion-label>
+      <ion-input type="text" [(ngModel)]="modelTown.ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pays:</ion-label>
+      <ion-input type="text" [(ngModel)]="modelTown.pays"></ion-input>
+    </ion-item>
+
+      <ion-item>
+        <ion-label>Continent:</ion-label>
+        <ion-input type="text" [(ngModel)]="modelTown.continent"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Population:</ion-label>
+        <ion-input type="text" [(ngModel)]="modelTown.population"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <ion-button shape="round" type="submit" color="secondary" (click)="validateInsert()">Enregister la ville</ion-button>
+
+ </ion-content>
+
+
+
+

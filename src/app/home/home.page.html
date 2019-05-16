@@ -13,11 +13,21 @@
 
 <ion-list>
 
-<ion-item-sliding *ngFor="let town of townTab">
+<ion-item *ngFor="let town of townTab">
   
-  <ion-item>{{town.ville}}</ion-item>
+  <ion-button color="success" (click)="townInfo(town.id)">{{town.ville}}</ion-button>
 
-</ion-item-sliding>
+  <ion-button  slot="end" size="small" color="danger" (click)="deleteTown(town.id)">
+    <ion-icon name="trash"></ion-icon>
+  </ion-button>
+
+  <ion-button  slot="end" size="small" color="secondary" (click)="updateTown()">
+    <ion-icon name="create"></ion-icon>
+  </ion-button>
+  
+  
+
+</ion-item>
 
 </ion-list>
 

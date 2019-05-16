@@ -14,7 +14,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'ville-select', loadChildren: './ville-select/ville-select.module#VilleSelectPageModule' },
+  { path: 'ville-insert', loadChildren: './ville-insert/ville-insert.module#VilleInsertPageModule' }
 ];
 
 @NgModule({

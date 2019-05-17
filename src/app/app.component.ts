@@ -16,10 +16,15 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title:'Ajouter une ville',
+      url:'/ville-insert',
+      icon:'md-add-circle'
     }
+    // {
+    //   title: 'List',
+    //   url: '/list',
+    //   icon: 'list'
+    // }
   ];
 
   constructor(

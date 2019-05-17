@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ville-update</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='home'></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+     <ion-item>
+  <ion-label>Nom:</ion-label>
+  <ion-input type="text" [(ngModel)]=modelTown.ville></ion-input>
+</ion-item>
+  
+<ion-item>
+  <ion-label>Pays:</ion-label>
+  <ion-input type="text" [(ngModel)]=modelTown.pays></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Continent:</ion-label>
+  <ion-input type="text" [(ngModel)]=modelTown.continent></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Population:</ion-label>
+  <ion-input type="text" [(ngModel)]=modelTown.population></ion-input>
+</ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" (click)="validateUpdate()">Modifier</ion-button>
+  </ion-toolbar>
+</ion-footer>

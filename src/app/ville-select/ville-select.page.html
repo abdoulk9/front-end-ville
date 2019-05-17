@@ -1,19 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Info ville</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='home'></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+  <ion-list *ngFor="let town of townSelect">
     <ion-label>Pays:</ion-label>
-    <p>{{townSelect.pays}}</p>
+    <ion-item>{{town.pays}}</ion-item>
 
     <ion-label>Continent:</ion-label>
-    <p>{{townSelect.continent}}</p>
+    <ion-item>{{town.continent}}</ion-item>
 
     <ion-label>Population:</ion-label>
-    <p>{{townSelect.population}}</p>
+    <ion-item>{{town.population}}</ion-item>
   </ion-list>
 </ion-content>

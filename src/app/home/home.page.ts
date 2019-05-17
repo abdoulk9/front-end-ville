@@ -12,8 +12,10 @@ export class HomePage {
 
   public townTab;
   public townSelect;
-  public townId = 0;
-  public id;
+  public idInfoTown ;
+  public idForUpdate;
+  public id;;
+  public idVilleSelected
 
 
   constructor(private httpClient: HttpClient,
@@ -28,28 +30,36 @@ export class HomePage {
           console.log(data);
           this.townTab = data;
         },
-        (err) =>{console.log(err)} 
+        (err) => { console.log(err) }
       );
     console.log(this.townTab);
   }
 
-  townInfo(townId) {
-    this.router.navigateByUrl('/ville-select/' + townId);
+  showTownInfo(idVilleSelected) {
+    this.router.navigateByUrl('/ville-select/' + idVilleSelected);
+    console.log(idVilleSelected);
+  }
+  updateTown(id) {
+    this.router.navigateByUrl('/ville-update/' + id);
+    console.log(id);
   }
 
-  
-  deleteTown(id){
+  deleteTown(id) {
     this.httpClient.delete("http://localhost:4000/ville/" + id)
-    .subscribe(
-      (data: any) => {
-        if (data.delete) {
-          this.router.navigateByUrl('/home');
-        }else{
-          console.log(data.err);
-          console.log("Echec suppression")
+      .subscribe(
+        (data: any) => {
+          if (data.delete) {
+            this.router.navigateByUrl('/home');
+          } else {
+            err => console.log(err)
+            console.log("Echec suppression")
+          }
         }
-      }
-    )
+      )
+  }
+
+  insertVille() {
+    this.router.navigateByUrl('/ville-insert');
   }
 
 }
